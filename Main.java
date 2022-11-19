@@ -7,7 +7,12 @@ class Main {
         arr.add(15);
         arr.add(16);
         arr.add(17);
+        System.out.println(String.format("Capacity -> %s", arr.getCapacity()));
+        System.out.println(String.format("Size -> %s", arr.size()));
         arr.add(20);
+        arr.add(21);
+        System.out.println(String.format("Capacity -> %s", arr.getCapacity()));
+        System.out.println(String.format("Size -> %s", arr.size()));
         arr.print();
     }
 }

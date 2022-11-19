@@ -20,6 +20,8 @@ public class DynamicArray<T> {
         this.arr = new Object[this.capacity];
     }
     public void add(T value) {
+        if(this.size == this.capacity)
+            resize(this.capacity * 2);
         this.arr[this.size] = value;
         this.size++;
     }
@@ -30,5 +32,30 @@ public class DynamicArray<T> {
         }
         this.capacity = newCapacity;
         this.arr = new_array;
+    }
+    public int getCapacity() {
+        return this.capacity;
+    }
+    public int size() {
+        return this.size;
+    }
+    // Quite ugly, but I just want to see the result in a fast way
+    public void print() {
+        String array = "";
+        if(size == 0) {
+            array = "[]";
+            System.out.println(array);
+            return;
+        }
+        array = "[";
+        for(int i = 0; i <= this.size-1; i++) {
+            if(i != this.size-1) {
+                array = array + this.arr[i].toString() + ", ";
+            } else {
+                array = array + this.arr[i].toString();
+            }
+        }
+        array = array + "]";
+        System.out.println(array);
     }
 }
