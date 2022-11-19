@@ -1,6 +1,6 @@
 package arrays;
 
-public class DynamicArray {
+public class DynamicArray<T> {
     private int capacity;
     private int size = 0;
     private Object[] arr;
@@ -18,5 +18,17 @@ public class DynamicArray {
     public DynamicArray(int capacity) {
         this.capacity = capacity;
         this.arr = new Object[this.capacity];
+    }
+    public void add(T value) {
+        this.arr[this.size] = value;
+        this.size++;
+    }
+    private void resize(int newCapacity) {
+        Object[] new_array = new Object[newCapacity];
+        for(int i = 0; i < this.size; i++) {
+            new_array[i] = this.arr[i];
+        }
+        this.capacity = newCapacity;
+        this.arr = new_array;
     }
 }
