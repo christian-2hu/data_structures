@@ -42,7 +42,7 @@ public class DynamicArray<T> {
         this.capacity = newCapacity;
         this.arr = new_array;
     }
-    public int getCapacity() {
+    public int capacity() {
         return this.capacity;
     }
     public int size() {
