@@ -39,6 +39,9 @@ public class DynamicArray<T> {
     public int size() {
         return this.size;
     }
+    public boolean isEmpty() {
+        return this.size == 0 ? true : false;
+    }
     // Quite ugly, but I just want to see the result in a fast way
     public void print() {
         String array = "";
