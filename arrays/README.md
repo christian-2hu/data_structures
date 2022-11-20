@@ -12,7 +12,7 @@ Putting in practice my data structures studies. Implementing a vector (mutable a
 - [x] get(index) - returns item at given index, blows up if index out of bounds
 - [x] push(item)
 - [x] insert(index, item) - inserts item at index, shifts that index's value and trailing elements to the right
-- [ ] prepend(item) - can use insert above at index 0
+- [x] prepend(item) - can use insert above at index 0
 - [ ] pop() - remove from end, return value
 - [ ] delete(index) - delete item at index, shifting all trailing elements left
 - [ ] remove(item) - looks for value and removes index holding it (even if in multiple places)

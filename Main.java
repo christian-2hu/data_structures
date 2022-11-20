@@ -23,5 +23,7 @@ class Main {
         System.out.println(String.format("Size -> %s", arr.size()));
         arr.insert(0, 1);
         arr.print();
+        arr.prepend(0);
+        arr.print();
     }
 }
