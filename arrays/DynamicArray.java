@@ -58,6 +58,12 @@ public class DynamicArray<T> {
     public void prepend(T value) {
         this.insert(0, value);
     }
+    @SuppressWarnings("unchecked")
+    public T pop() {
+        T lastItem = (T) this.arr[this.size-1];
+        this.size--;
+        return lastItem;
+    }
     private void resize(int newCapacity) {
         Object[] new_array = new Object[newCapacity];
         for(int i = 0; i < this.size; i++) {

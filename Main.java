@@ -25,5 +25,8 @@ class Main {
         arr.print();
         arr.prepend(0);
         arr.print();
+        Integer pop = arr.pop();
+        System.out.println(pop);
+        arr.print();
     }
 }
