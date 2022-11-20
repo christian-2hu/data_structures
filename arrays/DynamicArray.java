@@ -25,6 +25,12 @@ public class DynamicArray<T> {
         this.arr[this.size] = value;
         this.size++;
     }
+    @SuppressWarnings("unchecked")
+    public T get(int index) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        return (T) this.arr[index];
+    }
     private void resize(int newCapacity) {
         Object[] new_array = new Object[newCapacity];
         for(int i = 0; i < this.size; i++) {

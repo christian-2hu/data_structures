@@ -9,7 +9,7 @@ Putting in practice my data structures studies. Implementing a vector (mutable a
 - [x] size() - number of items
 - [x] capacity() - number of items it can hold
 - [x] is_empty()
-- [ ] get(index) - returns item at given index, blows up if index out of bounds
+- [x] get(index) - returns item at given index, blows up if index out of bounds
 - [ ] push(item)
 - [ ] insert(index, item) - inserts item at index, shifts that index's value and trailing elements to the right
 - [ ] prepend(item) - can use insert above at index 0

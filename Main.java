@@ -14,5 +14,6 @@ class Main {
         System.out.println(String.format("Capacity -> %s", arr.getCapacity()));
         System.out.println(String.format("Size -> %s", arr.size()));
         arr.print();
+        System.out.println(arr.get(5));
     }
 }
