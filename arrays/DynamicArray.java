@@ -19,11 +19,14 @@ public class DynamicArray<T> {
         this.capacity = capacity;
         this.arr = new Object[this.capacity];
     }
-    public void add(T value) {
+    public void push(T value) {
         if(this.size == this.capacity)
             resize(this.capacity * 2);
         this.arr[this.size] = value;
         this.size++;
+    }
+    public void add(T value) {
+        this.push(value);
     }
     @SuppressWarnings("unchecked")
     public T get(int index) {
