@@ -43,6 +43,18 @@ public class DynamicArray<T> {
     public void add(T value) {
         this.push(value);
     }
+    public void insert(int index, T value) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        if(this.size == this.capacity)
+            resize(this.capacity*2);
+        
+        this.size++;
+        for(int i = this.size-1; i > index; i--) {
+            this.arr[i] = this.arr[i-1];
+        }
+        this.arr[index] = value;
+    }
     private void resize(int newCapacity) {
         Object[] new_array = new Object[newCapacity];
         for(int i = 0; i < this.size; i++) {

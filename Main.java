@@ -15,5 +15,13 @@ class Main {
         System.out.println(String.format("Size -> %s", arr.size()));
         arr.print();
         System.out.println(arr.get(5));
+        arr.insert(1, 13);
+        arr.print();
+        arr.insert(arr.size()-1, 22);
+        arr.print();
+        System.out.println(String.format("Capacity -> %s", arr.capacity()));
+        System.out.println(String.format("Size -> %s", arr.size()));
+        arr.insert(0, 1);
+        arr.print();
     }
 }
