@@ -64,6 +64,16 @@ public class DynamicArray<T> {
         this.size--;
         return lastItem;
     }
+    public void delete(int index) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        for(int i = index; i < this.size; i++) {
+            if(i == this.size-1)
+                break;
+            this.arr[i] = this.arr[i+1];
+        }
+        this.size--;
+    }
     private void resize(int newCapacity) {
         Object[] new_array = new Object[newCapacity];
         for(int i = 0; i < this.size; i++) {

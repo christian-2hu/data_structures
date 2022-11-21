@@ -28,5 +28,11 @@ class Main {
         Integer pop = arr.pop();
         System.out.println(pop);
         arr.print();
+        System.out.println(String.format("Capacity -> %s", arr.capacity()));
+        System.out.println(String.format("Size -> %s", arr.size()));
+        arr.delete(0);
+        arr.print();
+        System.out.println(String.format("Capacity -> %s", arr.capacity()));
+        System.out.println(String.format("Size -> %s", arr.size()));
     }
 }
