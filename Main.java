@@ -34,5 +34,10 @@ class Main {
         arr.print();
         System.out.println(String.format("Capacity -> %s", arr.capacity()));
         System.out.println(String.format("Size -> %s", arr.size()));
+        arr.add(1);
+        arr.remove(1);
+        arr.print();
+        System.out.println(String.format("Capacity -> %s", arr.capacity()));
+        System.out.println(String.format("Size -> %s", arr.size()));
     }
 }

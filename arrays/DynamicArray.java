@@ -74,6 +74,16 @@ public class DynamicArray<T> {
         }
         this.size--;
     }
+    public void remove(T value) {
+        int counter = 0;
+        for(int i = 0; i < this.size; i++) {
+            if(this.arr[i] != value) {
+                this.arr[counter] = this.arr[i];
+                counter++;
+            }
+        }
+        this.size = counter;
+    }
     private void resize(int newCapacity) {
         Object[] new_array = new Object[newCapacity];
         for(int i = 0; i < this.size; i++) {

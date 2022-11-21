@@ -15,7 +15,7 @@ Putting in practice my data structures studies. Implementing a vector (mutable a
 - [x] prepend(item) - can use insert above at index 0
 - [x] pop() - remove from end, return value
 - [x] delete(index) - delete item at index, shifting all trailing elements left
-- [ ] remove(item) - looks for value and removes index holding it (even if in multiple places)
+- [x] remove(item) - looks for value and removes index holding it (even if in multiple places)
 - [ ] find(item) - looks for value and returns first index with that value, -1 if not found
 - [x] resize(new_capacity) // private function
 	- [ ] when you reach capacity, resize to double the size
