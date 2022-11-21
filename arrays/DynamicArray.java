@@ -84,6 +84,13 @@ public class DynamicArray<T> {
         }
         this.size = counter;
     }
+    public int find(T value) {
+        for(int i = 0; i < this.size; i++) {
+            if(this.arr[i].equals(value))
+                return i;
+        }
+        return -1;
+    }
     private void resize(int newCapacity) {
         Object[] new_array = new Object[newCapacity];
         for(int i = 0; i < this.size; i++) {

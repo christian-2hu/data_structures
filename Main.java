@@ -39,5 +39,6 @@ class Main {
         arr.print();
         System.out.println(String.format("Capacity -> %s", arr.capacity()));
         System.out.println(String.format("Size -> %s", arr.size()));
+        System.out.println(arr.find(22));
     }
 }
