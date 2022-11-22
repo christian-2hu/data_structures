@@ -3,7 +3,7 @@
 My study plan to understand more data structures.
 
 To be implemented: 
-- [ ] Arrays
+- [x] Arrays
 - [ ] Linked Lists
 - [ ] Stack
 - [ ] Queue
