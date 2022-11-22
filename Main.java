@@ -37,8 +37,19 @@ class Main {
         arr.add(1);
         arr.remove(1);
         arr.print();
+        arr.add(10);
+        arr.add(10);
+        arr.delete(arr.find(13));
+        arr.delete(arr.find(15));
+        arr.delete(arr.find(20));
         System.out.println(String.format("Capacity -> %s", arr.capacity()));
         System.out.println(String.format("Size -> %s", arr.size()));
-        System.out.println(arr.find(22));
+        arr.print();
+        arr.remove(10);
+        System.out.println(String.format("Capacity -> %s", arr.capacity()));
+        System.out.println(String.format("Size -> %s", arr.size()));
+        arr.print();
+        System.out.println((arr.capacity()/4));
+        System.out.println((arr.capacity()/4) > arr.size());
     }
 }

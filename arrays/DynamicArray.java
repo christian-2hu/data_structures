@@ -62,6 +62,9 @@ public class DynamicArray<T> {
     public T pop() {
         T lastItem = (T) this.arr[this.size-1];
         this.size--;
+        // when popping an item, if size is 1/4 of capacity, resize to half 
+        if((this.capacity/4) == this.size)
+            this.resize(this.capacity/2);
         return lastItem;
     }
     public void delete(int index) {
@@ -72,6 +75,9 @@ public class DynamicArray<T> {
                 break;
             this.arr[i] = this.arr[i+1];
         }
+        // when deleting an item, if size is 1/4 of capacity, resize to half 
+        if((this.capacity/4) == this.size)
+            this.resize(this.capacity/2);
         this.size--;
     }
     public void remove(T value) {
@@ -83,6 +89,9 @@ public class DynamicArray<T> {
             }
         }
         this.size = counter;
+        // when removing an item, if size is less or equals to 1/4 of capacity, resize to half 
+        if(this.size <= (this.capacity/4))
+            this.resize(this.capacity/2);
     }
     public int find(T value) {
         for(int i = 0; i < this.size; i++) {
