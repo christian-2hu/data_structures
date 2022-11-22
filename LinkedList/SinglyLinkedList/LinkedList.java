@@ -9,6 +9,9 @@ public class LinkedList<T> {
     public int size() {
         return size;
     }
+    public boolean empty() {
+        return size == 0 ? true : false;
+    }
 }
 
 class Node<T> {
