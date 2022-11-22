@@ -1,8 +1,8 @@
 package LinkedList.SinglyLinkedList;
 
 public class LinkedList<T> {
-    Node<T> head;
-    int size = 0;
+    private Node<T> head;
+    private int size = 0;
 
     LinkedList(){}
 
@@ -15,13 +15,15 @@ public class LinkedList<T> {
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
         if(head == null) {
-            this.head = newNode; 
+            this.head = newNode;
+            this.size++;
         } else {
             Node<T> ptr = this.head;
             while(ptr.next != null) {
                 ptr = ptr.next;
             }
             ptr.next = newNode;
+            this.size++;
         }
     }
     public void push_back(T data) {
