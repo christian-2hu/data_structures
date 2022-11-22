@@ -70,6 +70,11 @@ public class DynamicArray<T> {
     public void delete(int index) {
         if(index < 0 | index >= this.size)
             throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        // O(1) to add/delete at end 
+        if(index == this.size-1) {
+            this.pop();
+            return;
+        }
         for(int i = index; i < this.size; i++) {
             if(i == this.size-1)
                 break;

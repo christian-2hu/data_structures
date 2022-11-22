@@ -20,7 +20,7 @@ Putting in practice my data structures studies. Implementing a vector (mutable a
 - [x] resize(new_capacity) // private function
 	- [x] when you reach capacity, resize to double the size
 	- [x] when popping an item, if size is 1/4 of capacity, resize to half
-- [ ] Time
+- [x] Time
 	- O(1) to add/remove at end (amortized for allocations for more space), index, or update
 	- O(n) to insert/remove elsewhere
 - [ ] Space
