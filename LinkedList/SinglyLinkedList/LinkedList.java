@@ -12,11 +12,26 @@ public class LinkedList<T> {
     public boolean empty() {
         return size == 0 ? true : false;
     }
+    public void add(T data) {
+        Node<T> newNode = new Node<>(data);
+        if(head == null) {
+            this.head = newNode; 
+        } else {
+            Node<T> ptr = this.head;
+            while(ptr.next != null) {
+                ptr = ptr.next;
+            }
+            ptr.next = newNode;
+        }
+    }
+    public void push_back(T data) {
+        this.add(data);
+    }
 }
 
 class Node<T> {
-    T data;
-    Node<T> next;
+    protected T data;
+    protected Node<T> next;
 
     Node(T data) {
         this.data = data;
