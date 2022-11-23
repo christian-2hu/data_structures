@@ -7,10 +7,10 @@ public class LinkedList<T> {
     LinkedList(){}
 
     public int size() {
-        return size;
+        return this.size;
     }
     public boolean empty() {
-        return size == 0 ? true : false;
+        return this.size == 0 ? true : false;
     }
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
@@ -46,6 +46,12 @@ public class LinkedList<T> {
     }
     public T value_at(int index) {
         return this.get(index);
+    }
+    public void push_front(T data) {
+        Node<T> newNode = new Node<>(data);
+        newNode.next = this.head;
+        this.head = newNode;
+        this.size++;
     }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
