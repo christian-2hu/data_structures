@@ -15,17 +15,14 @@ public class LinkedList<T> {
     }
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
-        if(head == null) {
+        if(this.head == null) {
             this.head = newNode;
-            this.size++;
+            this.tail = this.head;
         } else {
-            Node<T> ptr = this.head;
-            while(ptr.next != null) {
-                ptr = ptr.next;
-            }
-            ptr.next = newNode;
-            this.size++;
+            this.tail.next = newNode;
+            this.tail = newNode;
         }
+        this.size++;
     }
     public void push_back(T data) {
         this.add(data);
