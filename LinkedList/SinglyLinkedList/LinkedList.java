@@ -57,6 +57,21 @@ public class LinkedList<T> {
         this.size--;
         return removedItem;
     }
+    public T pop_back() {
+        if(this.head == null)
+            return null;
+        var current = this.head;
+        var newTail = current;
+        while(current.next != null) {
+            newTail = current;
+            current = current.next;
+        }
+        this.tail = newTail;
+        this.tail.next = null;
+        this.size--;
+        return current.data;
+        
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");
