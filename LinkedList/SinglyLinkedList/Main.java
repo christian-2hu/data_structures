@@ -14,5 +14,9 @@ public class Main {
         list.push_front(3);
         list.print();
         System.out.println(String.format("Size -> %s", list.size()));
+        Integer removed = list.pop_front();
+        System.out.println(removed);
+        list.print();
+        System.out.println(String.format("Size -> %s", list.size()));
     }
 }

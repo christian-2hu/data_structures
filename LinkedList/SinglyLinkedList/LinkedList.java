@@ -53,6 +53,12 @@ public class LinkedList<T> {
         this.head = newNode;
         this.size++;
     }
+    public T pop_front() {
+        T removedItem = this.head.data;
+        this.head = this.head.next;
+        this.size--;
+        return removedItem;
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");
