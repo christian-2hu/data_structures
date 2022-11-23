@@ -20,5 +20,7 @@ public class Main {
         System.out.println(String.format("Size -> %s", list.size()));
         System.out.println(list.pop_back());
         list.print();
+        System.out.println(list.front());
+        System.out.println(list.back());
     }
 }

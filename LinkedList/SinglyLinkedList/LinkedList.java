@@ -70,7 +70,12 @@ public class LinkedList<T> {
         this.tail.next = null;
         this.size--;
         return current.data;
-        
+    }
+    public T front() {
+        return this.size != 0 ? this.head.data : null;
+    }
+    public T back() {
+        return this.size != 0? this.tail.data : null;
     }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
