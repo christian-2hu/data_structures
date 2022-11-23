@@ -34,7 +34,7 @@ public class LinkedList<T> {
             throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
         Node<T> ptr = this.head;
         int count = 0;
-        while(ptr.next != null) {
+        while(ptr != null) {
             if(index == count) {
                 return ptr.data;
             }
