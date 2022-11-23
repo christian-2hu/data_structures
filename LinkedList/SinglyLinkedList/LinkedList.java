@@ -2,6 +2,7 @@ package LinkedList.SinglyLinkedList;
 
 public class LinkedList<T> {
     private Node<T> head;
+    private Node<T> tail;
     private int size = 0;
 
     LinkedList(){}
