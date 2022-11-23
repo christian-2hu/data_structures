@@ -8,7 +8,7 @@ Implement:
 - [x] size() - returns number of data elements in list
 - [x] empty() - bool returns true if empty
 - [ ] value_at(index) - returns the value of the nth item (starting at 0 for first)
-- [ ] push_front(value) - adds an item to the front of the list
+- [x] push_front(value) - adds an item to the front of the list
 - [ ] pop_front() - remove front item and return its value
 - [x] push_back(value) - adds an item at the end
 - [ ] pop_back() - removes end item and returns its value

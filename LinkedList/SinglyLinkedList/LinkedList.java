@@ -44,6 +44,9 @@ public class LinkedList<T> {
         // returns null if it doesn't exists
         return null;
     }
+    public T value_at(int index) {
+        return this.get(index);
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");
