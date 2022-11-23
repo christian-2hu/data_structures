@@ -75,7 +75,7 @@ public class LinkedList<T> {
         return this.size != 0 ? this.head.data : null;
     }
     public T back() {
-        return this.size != 0? this.tail.data : null;
+        return this.size != 0 ? this.tail.data : null;
     }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
