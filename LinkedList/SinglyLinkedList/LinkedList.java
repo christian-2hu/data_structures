@@ -60,8 +60,8 @@ public class LinkedList<T> {
     public T pop_back() {
         if(this.head == null)
             return null;
-        var current = this.head;
-        var newTail = current;
+        Node<T> current = this.head;
+        Node<T> newTail = current;
         while(current.next != null) {
             newTail = current;
             current = current.next;
