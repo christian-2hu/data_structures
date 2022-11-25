@@ -22,5 +22,7 @@ public class Main {
         list.print();
         System.out.println(list.front());
         System.out.println(list.back());
+        list.erase(2);
+        list.print();
     }
 }

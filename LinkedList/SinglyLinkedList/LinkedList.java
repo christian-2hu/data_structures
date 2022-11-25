@@ -77,6 +77,24 @@ public class LinkedList<T> {
     public T back() {
         return this.size != 0 ? this.tail.data : null;
     }
+    public void erase(int index) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        Node<T> current = this.head;
+        if(this.head == null)
+            return;
+        else if(index == 0) {
+            this.pop_front();
+        } else {
+            int count = 0;
+            while (count < index-1) { // node before the one being deleted
+                current = current.next;
+                count++;
+            }
+            current.next = current.next.next;
+            current = null;
+        }
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");
