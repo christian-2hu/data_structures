@@ -136,6 +136,19 @@ public class LinkedList<T> {
             counterNextPtr++;
         }
     }
+    /* returns the value of the node at nth position from the end of the list */
+    public T value_n_from_end(int n) {
+        int position = this.size;
+        Node<T> ptr = this.head;
+        while(ptr.next != null) {
+            if(position == n) {
+                return ptr.data;
+            }
+            ptr = ptr.next;
+            position--;
+        }
+        return null;
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");

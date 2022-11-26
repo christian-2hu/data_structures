@@ -40,7 +40,7 @@ public class Main {
         list.print();
         list.remove_value(11);
         list.print();
-        
+        //=======================//
         LinkedList<String> list2 = new LinkedList<>();
         list2.add("one");
         list2.add("two");
@@ -51,6 +51,8 @@ public class Main {
         list2.print();
         list2.insert(3, "three point nine");
         list2.print();
-
+        //=====================//
+        list.print();
+        System.out.println(list.value_n_from_end(7));
     }
 }
