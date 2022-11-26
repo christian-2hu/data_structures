@@ -24,5 +24,21 @@ public class Main {
         System.out.println(list.back());
         list.erase(2);
         list.print();
+        list.add(1);
+        list.add(3);
+        list.push_front(3);
+        list.print();
+        list.remove_value(3);
+        list.print();
+        list.add(3);
+        list.add(4);
+        list.add(3);
+        list.print();
+        list.remove_value(3);
+        list.print();
+        list.push_back(11);
+        list.print();
+        list.remove_value(11);
+        list.print();
     }
 }

@@ -95,6 +95,23 @@ public class LinkedList<T> {
             current = null;
         }
     }
+    public void remove_value(T value) {
+        Node<T> ptr = this.head;
+        Node<T> nextPtr = ptr.next;
+        // The while loop won't work for the first node so we'll check it first
+        if(this.get(0).equals(value)) {
+            this.pop_front();
+            return;
+        }
+        while(ptr.next != null) {
+            if(nextPtr.data.equals(value)) {
+                ptr.next = nextPtr.next;
+                break;
+            }
+            ptr = ptr.next;
+            nextPtr = ptr.next;
+        }
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");
