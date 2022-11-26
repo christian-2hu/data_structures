@@ -122,16 +122,16 @@ public class LinkedList<T> {
         Node<T> ptr = this.head;
         Node<T> nextPtr = ptr.next;
         Node<T> newValue = new Node<>(value);
-        int counter = 0;
+        int counterNextPtr = 1;
         while(ptr.next != null) {
-            if(counter == index) {
+            if(counterNextPtr == index) {
                 ptr.next = newValue;
                 newValue.next = nextPtr;
                 break;
             }
             ptr = ptr.next;
             nextPtr = ptr.next;
-            counter++;
+            counterNextPtr++;
         }
     }
     // A simple(ugly) print method just to check if things are alright

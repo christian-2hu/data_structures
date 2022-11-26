@@ -49,7 +49,7 @@ public class Main {
         list2.add("five");
         list2.add("six");
         list2.print();
-        list2.insert(3, "four point one");
+        list2.insert(3, "three point nine");
         list2.print();
 
     }
