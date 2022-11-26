@@ -93,6 +93,7 @@ public class LinkedList<T> {
             }
             current.next = current.next.next;
             current = null;
+            this.size--;
         }
     }
     public void remove_value(T value) {
@@ -106,6 +107,7 @@ public class LinkedList<T> {
         while(ptr.next != null) {
             if(nextPtr.data.equals(value)) {
                 ptr.next = nextPtr.next;
+                this.size--;
                 break;
             }
             ptr = ptr.next;
