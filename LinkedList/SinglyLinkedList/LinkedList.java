@@ -112,6 +112,28 @@ public class LinkedList<T> {
             nextPtr = ptr.next;
         }
     }
+    public void insert(int index, T value) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        if(index == 0) {
+            this.push_front(value);
+            return;
+        }
+        Node<T> ptr = this.head;
+        Node<T> nextPtr = ptr.next;
+        Node<T> newValue = new Node<>(value);
+        int counter = 0;
+        while(ptr.next != null) {
+            if(counter == index) {
+                ptr.next = newValue;
+                newValue.next = nextPtr;
+                break;
+            }
+            ptr = ptr.next;
+            nextPtr = ptr.next;
+            counter++;
+        }
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");

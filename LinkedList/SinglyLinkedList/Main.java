@@ -40,5 +40,17 @@ public class Main {
         list.print();
         list.remove_value(11);
         list.print();
+        
+        LinkedList<String> list2 = new LinkedList<>();
+        list2.add("one");
+        list2.add("two");
+        list2.add("three");
+        list2.add("four");
+        list2.add("five");
+        list2.add("six");
+        list2.print();
+        list2.insert(3, "four point one");
+        list2.print();
+
     }
 }
