@@ -155,6 +155,19 @@ public class LinkedList<T> {
         }
         return null;
     }
+    public void reverse() {
+        Node<T> prevPr = null;
+        Node<T> ptr = this.head;
+        Node<T> nextPtr = null;
+        this.tail = ptr;
+        while(ptr != null) {
+            nextPtr = ptr.next;
+            ptr.next = prevPr;
+            prevPr = ptr;
+            ptr = nextPtr;
+        }
+        this.head = prevPr;
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");

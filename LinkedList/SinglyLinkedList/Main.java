@@ -66,5 +66,11 @@ public class Main {
         System.out.println(list.getBack());
         list2.erase(list2.size()-1);
         list2.print();
+        list.add(56);
+        list.print();
+        list.reverse();
+        list.print();
+        System.out.println(list.getFront());
+        System.out.println(list.getBack());
     }
 }
