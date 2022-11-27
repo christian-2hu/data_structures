@@ -4,7 +4,7 @@ My study plan to understand more data structures.
 
 To be implemented: 
 - [x] Arrays
-- [ ] Linked Lists
+- [x] Linked Lists
 - [ ] Stack
 - [ ] Queue
 - [ ] Hash Table
