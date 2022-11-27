@@ -85,11 +85,15 @@ public class LinkedList<T> {
             this.pop_front();
             return;
         }
+        if(index == this.size-1) {
+            this.pop_back();
+            return;
+        }
         for(int i = 0; i < index-1; i++) {
             current = current.next;
         }
         current.next = current.next.next;
-        this.size--;        
+        this.size--;
     }
     public void remove_value(T value) {
         Node<T> ptr = this.head;
