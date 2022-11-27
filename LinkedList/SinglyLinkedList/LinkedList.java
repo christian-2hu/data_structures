@@ -112,6 +112,13 @@ public class LinkedList<T> {
             ptr = ptr.next;
             nextPtr = ptr.next;
         }
+        // Update tail
+        Node<T> newTail = this.head;
+        while(newTail.next != null) {
+            newTail = newTail.next;
+        }
+        this.tail = newTail;
+        this.tail.next = null;
     }
     public void insert(int index, T value) {
         if(index < 0 | index >= this.size)
