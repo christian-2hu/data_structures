@@ -7,8 +7,8 @@ Putting in practice my data structures studies. Implementing a vector (mutable a
 	- can allocate int array under the hood, just not use its features
 	- start with 16, or if starting number is greater, use power of 2 - 16, 32, 64, 128
 - [x] size() - number of items
-- [x] capacity() - number of items it can hold
-- [x] is_empty()
+- [x] getCapacity() - number of items it can hold
+- [x] isEmpty()
 - [x] get(index) - returns item at given index, blows up if index out of bounds
 - [x] push(item)
 - [x] insert(index, item) - inserts item at index, shifts that index's value and trailing elements to the right

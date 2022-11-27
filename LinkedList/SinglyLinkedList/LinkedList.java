@@ -24,7 +24,7 @@ public class LinkedList<T> {
         }
         this.size++;
     }
-    public void push_back(T data) {
+    public void pushBack(T data) {
         this.add(data);
     }
     public T get(int index) {
@@ -42,22 +42,19 @@ public class LinkedList<T> {
         // returns null if it doesn't exists
         return null;
     }
-    public T value_at(int index) {
-        return this.get(index);
-    }
-    public void push_front(T data) {
+    public void pushFront(T data) {
         Node<T> newNode = new Node<>(data);
         newNode.next = this.head;
         this.head = newNode;
         this.size++;
     }
-    public T pop_front() {
+    public T popFront() {
         T removedItem = this.head.data;
         this.head = this.head.next;
         this.size--;
         return removedItem;
     }
-    public T pop_back() {
+    public T popBack() {
         if(this.head == null)
             return null;
         Node<T> current = this.head;
@@ -71,10 +68,10 @@ public class LinkedList<T> {
         this.size--;
         return current.data;
     }
-    public T front() {
+    public T getFront() {
         return this.size != 0 ? this.head.data : null;
     }
-    public T back() {
+    public T getBack() {
         return this.size != 0 ? this.tail.data : null;
     }
     public void erase(int index) {
@@ -82,11 +79,11 @@ public class LinkedList<T> {
             throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
         Node<T> current = this.head;
         if(index == 0) {
-            this.pop_front();
+            this.popFront();
             return;
         }
         if(index == this.size-1) {
-            this.pop_back();
+            this.popBack();
             return;
         }
         for(int i = 0; i < index-1; i++) {
@@ -95,12 +92,12 @@ public class LinkedList<T> {
         current.next = current.next.next;
         this.size--;
     }
-    public void remove_value(T value) {
+    public void remove(T value) {
         Node<T> ptr = this.head;
         Node<T> nextPtr = ptr.next;
         // The while loop won't work for the first node so we'll check it first
         if(this.get(0).equals(value)) {
-            this.pop_front();
+            this.popFront();
             return;
         }
         while(ptr.next != null) {
@@ -124,7 +121,7 @@ public class LinkedList<T> {
         if(index < 0 | index >= this.size)
             throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
         if(index == 0) {
-            this.push_front(value);
+            this.pushFront(value);
             return;
         }
         Node<T> ptr = this.head;
@@ -142,8 +139,11 @@ public class LinkedList<T> {
             counterNextPtr++;
         }
     }
-    /* returns the value of the node at nth position from the end of the list */
-    public T value_n_from_end(int n) {
+    /**
+     * @param n The position 
+     * @return The value of the node at nth position from the end of the list
+     */
+    public T nFromEnd(int n) {
         int position = this.size;
         Node<T> ptr = this.head;
         while(ptr.next != null) {

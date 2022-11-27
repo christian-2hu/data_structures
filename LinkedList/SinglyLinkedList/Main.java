@@ -9,36 +9,36 @@ public class Main {
         System.out.println(String.format("Size -> %s", list.size()));
         list.print();
         System.out.println(list.get(2));
-        list.push_front(5);
-        list.push_front(4);
-        list.push_front(3);
+        list.pushFront(5);
+        list.pushFront(4);
+        list.pushFront(3);
         list.print();
         System.out.println(String.format("Size -> %s", list.size()));
-        Integer removed = list.pop_front();
+        Integer removed = list.popFront();
         System.out.println(removed);
         list.print();
         System.out.println(String.format("Size -> %s", list.size()));
-        System.out.println(list.pop_back());
+        System.out.println(list.popBack());
         list.print();
-        System.out.println(list.front());
-        System.out.println(list.back());
+        System.out.println(list.getFront());
+        System.out.println(list.getBack());
         list.erase(2);
         list.print();
         list.add(1);
         list.add(3);
-        list.push_front(3);
+        list.pushFront(3);
         list.print();
-        list.remove_value(3);
+        list.remove(3);
         list.print();
         list.add(3);
         list.add(4);
         list.add(3);
         list.print();
-        list.remove_value(3);
+        list.remove(3);
         list.print();
-        list.push_back(11);
+        list.pushBack(11);
         list.print();
-        list.remove_value(11);
+        list.remove(11);
         list.print();
         //=======================//
         LinkedList<String> list2 = new LinkedList<>();
@@ -53,6 +53,18 @@ public class Main {
         list2.print();
         //=====================//
         list.print();
-        System.out.println(list.value_n_from_end(7));
+        System.out.println(list.nFromEnd(7));
+        list.erase(2);
+        list.print();
+        list.erase(5);
+        list.print();
+        System.out.println(list.getBack());
+        list.add(6);
+        list.print();
+        list.remove(6);
+        list.print();
+        System.out.println(list.getBack());
+        list2.erase(list2.size()-1);
+        list2.print();
     }
 }

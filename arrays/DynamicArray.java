@@ -22,7 +22,7 @@ public class DynamicArray<T> {
     public int size() {
         return this.size;
     }
-    public int capacity() {
+    public int getCapacity() {
         return this.capacity;
     }
     public boolean isEmpty() {
