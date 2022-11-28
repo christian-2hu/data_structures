@@ -17,6 +17,12 @@ public class Queue<T> {
         }
         this.size++;
     }
+    public T dequeue() {
+        T removedItem = this.head.data;
+        this.head = this.head.next;
+        this.size--;
+        return removedItem;
+    }
 }
 
 class Node<T> {
