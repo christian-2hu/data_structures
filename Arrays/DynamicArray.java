@@ -1,4 +1,4 @@
-package arrays;
+package Arrays;
 
 public class DynamicArray<T> {
     private int capacity;
