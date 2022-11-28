@@ -23,6 +23,9 @@ public class Queue<T> {
         this.size--;
         return removedItem;
     }
+    public boolean isEmpty() {
+        return (this.size == 0) ? true : false;
+    }
 }
 
 class Node<T> {
