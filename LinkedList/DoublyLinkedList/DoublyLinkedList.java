@@ -1,12 +1,12 @@
 package LinkedList.DoublyLinkedList;
 
-public class DoublyLinkedList {
+public class DoublyLinkedList<T> {
     DoublyLinkedList(){}
 
 }
 
-class Node {
-    protected int data;
-    protected Node next;
-    protected Node previous;
+class Node<T> {
+    protected T data;
+    protected Node<T> next;
+    protected Node<T> previous;
 }
