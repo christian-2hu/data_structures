@@ -10,6 +10,25 @@ public class DoublyLinkedList<T> {
     public int size() {
         return this.size;
     }
+    public boolean empty() {
+        return this.size == 0 ? true : false;
+    }
+    public T getFront() {
+        return this.size != 0 ? this.head.data : null;
+    }
+    public T getBack() {
+        return this.size != 0 ? this.tail.data : null;
+    }
+    // A simple(ugly) print method just to check if things are alright
+    public void print() {
+        System.out.print("[");
+        Node<T> ptr = this.head;
+        while(ptr.next != null) {
+            System.out.print(String.format("%s, ", ptr.data));
+            ptr = ptr.next;
+        }
+        System.out.println(String.format("%s]", ptr.data));
+    }
 }
 
 class Node<T> {
