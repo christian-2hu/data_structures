@@ -5,7 +5,7 @@ Almost the same implementatio as Singly linked list, but this time with a previo
 
 Implement:
 
-- [ ] size() - returns number of data elements in list
+- [x] size() - returns number of data elements in list
 - [ ] empty() - bool returns true if empty
 - [ ] get(index) - returns the value of the nth item (starting at 0 for first)
 - [ ] pushFront(value) - adds an item to the front of the list

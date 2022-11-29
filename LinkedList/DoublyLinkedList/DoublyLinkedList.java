@@ -1,8 +1,15 @@
 package LinkedList.DoublyLinkedList;
 
 public class DoublyLinkedList<T> {
+    private Node<T> head;
+    private Node<T> tail;
+    private int size = 0;
+
     DoublyLinkedList(){}
 
+    public int size() {
+        return this.size;
+    }
 }
 
 class Node<T> {
