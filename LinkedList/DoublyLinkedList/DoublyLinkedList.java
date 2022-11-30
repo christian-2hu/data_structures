@@ -13,6 +13,17 @@ public class DoublyLinkedList<T> {
     public boolean empty() {
         return this.size == 0 ? true : false;
     }
+    public void add(T data) {
+        Node<T> newNode = new Node<>(data);
+        if(this.head == null) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            this.tail.next = newNode;
+            newNode.previous = this.tail;
+            this.tail = newNode;
+        }
+    }
     public T getFront() {
         return this.size != 0 ? this.head.data : null;
     }
