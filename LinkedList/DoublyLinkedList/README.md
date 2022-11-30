@@ -14,7 +14,7 @@ Implement:
 - [x] popBack() - removes end item and returns its value
 - [x] getFront() - get value of front item
 - [x] getBack() - get value of end item
-- [ ] insert(index, value) - insert value at index, so current item at that index is pointed to by new item at index
+- [x] insert(index, value) - insert value at index, so current item at that index is pointed to by new item at index
 - [ ] erase(index) - removes node at given index
 - [ ] getNFromEnd(n) - returns the value of the node at nth position from the end of the list
 - [ ] reverse() - reverses the list

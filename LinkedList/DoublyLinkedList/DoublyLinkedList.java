@@ -71,6 +71,23 @@ public class DoublyLinkedList<T> {
     public T getBack() {
         return this.size != 0 ? this.tail.data : null;
     }
+    public void insert(int index, T data) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        if(index == 0) {
+            this.add(data);
+            return;
+        }
+        Node<T> ptr = this.head;
+        Node<T> newNode = new Node<>(data);
+        for(int i = 0; i < index-1; i++) {
+            ptr = ptr.next;
+        }
+        ptr.next.previous = newNode;
+        newNode.next = ptr.next;
+        newNode.previous = ptr;
+        ptr.next = newNode;
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");

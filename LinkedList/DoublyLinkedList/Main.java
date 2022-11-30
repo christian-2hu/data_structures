@@ -23,6 +23,11 @@ public class Main {
         System.out.println(String.format("popBack = %s", popBack));
         list.print();
         list.reversePrint();
-
+        list.add(popBack);
+        list.print();
+        list.reversePrint();
+        list.insert(1, 14);
+        list.print();
+        list.reversePrint();
     }
 }
