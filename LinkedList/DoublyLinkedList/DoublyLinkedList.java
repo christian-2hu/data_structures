@@ -35,6 +35,15 @@ public class DoublyLinkedList<T> {
         newNode.next = this.head;
         this.head= newNode;
     }
+    public T popFront() {
+        if(this.head == null)
+            return null;
+        T temp = this.head.data;
+        this.head.next.previous = null;
+        this.head = this.head.next;
+        this.size--;
+        return temp;
+    }
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
         if(this.head == null) {

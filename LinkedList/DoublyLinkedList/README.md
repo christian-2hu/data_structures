@@ -9,7 +9,7 @@ Implement:
 - [x] empty() - bool returns true if empty
 - [x] get(index) - returns the value of the nth item (starting at 0 for first)
 - [x] pushFront(value) - adds an item to the front of the list
-- [ ] popFront() - remove front item and return its value
+- [x] popFront() - remove front item and return its value
 - [x] add(value) - adds an item at the end
 - [ ] popBack() - removes end item and returns its value
 - [x] getFront() - get value of front item

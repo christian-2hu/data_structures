@@ -14,5 +14,10 @@ public class Main {
         System.out.println(String.format("Last item is -> %s", list.get(list.size()-1)));
         list.pushFront(5);
         list.print();
+        list.reversePrint();
+        Integer pop = list.popFront();
+        System.out.println(String.format("popFront = %s", pop));
+        list.print();
+        list.reversePrint();
     }
 }
