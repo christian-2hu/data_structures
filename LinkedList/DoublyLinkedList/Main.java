@@ -19,5 +19,10 @@ public class Main {
         System.out.println(String.format("popFront = %s", pop));
         list.print();
         list.reversePrint();
+        Integer popBack = list.popBack();
+        System.out.println(String.format("popBack = %s", popBack));
+        list.print();
+        list.reversePrint();
+
     }
 }

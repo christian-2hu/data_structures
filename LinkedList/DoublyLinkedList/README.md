@@ -11,7 +11,7 @@ Implement:
 - [x] pushFront(value) - adds an item to the front of the list
 - [x] popFront() - remove front item and return its value
 - [x] add(value) - adds an item at the end
-- [ ] popBack() - removes end item and returns its value
+- [x] popBack() - removes end item and returns its value
 - [x] getFront() - get value of front item
 - [x] getBack() - get value of end item
 - [ ] insert(index, value) - insert value at index, so current item at that index is pointed to by new item at index

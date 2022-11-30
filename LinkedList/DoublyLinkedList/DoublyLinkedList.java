@@ -56,6 +56,15 @@ public class DoublyLinkedList<T> {
         }
         this.size++;
     }
+    public T popBack() {
+        if(this.head == null)
+            return null;
+        T temp = this.tail.data;
+        this.tail.previous.next = null;
+        this.tail = this.tail.previous;
+        this.size--;
+        return temp;
+    }
     public T getFront() {
         return this.size != 0 ? this.head.data : null;
     }
