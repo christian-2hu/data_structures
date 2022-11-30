@@ -12,5 +12,7 @@ public class Main {
         list.print();
         System.out.println(String.format("First item is -> %s", list.get(0)));
         System.out.println(String.format("Last item is -> %s", list.get(list.size()-1)));
+        list.pushFront(5);
+        list.print();
     }
 }

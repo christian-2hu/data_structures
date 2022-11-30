@@ -25,6 +25,16 @@ public class DoublyLinkedList<T> {
         }
         return null;
     }
+    public void pushFront(T data) {
+        if(this.head == null) {
+            this.add(data);
+            return;
+        }
+        Node<T> newNode = new Node<>(data);
+        this.head.previous = newNode;
+        newNode.next = this.head;
+        this.head= newNode;
+    }
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
         if(this.head == null) {
