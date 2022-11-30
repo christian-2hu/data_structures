@@ -105,6 +105,7 @@ public class DoublyLinkedList<T> {
         }
         ptr.next.next.previous = ptr;
         ptr.next = ptr.next.next;
+        this.size--;
     }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
