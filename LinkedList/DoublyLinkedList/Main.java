@@ -29,5 +29,8 @@ public class Main {
         list.insert(1, 14);
         list.print();
         list.reversePrint();
+        list.erase(0);
+        list.print();
+        list.reversePrint();
     }
 }

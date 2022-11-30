@@ -88,6 +88,24 @@ public class DoublyLinkedList<T> {
         newNode.previous = ptr;
         ptr.next = newNode;
     }
+    public void erase(int index) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        if(index == 0) {
+            this.popFront();
+            return;
+        }
+        if(index == this.size-1) {
+            this.popBack();
+            return;
+        }
+        Node<T> ptr = this.head;
+        for(int i = 0; i < index-1; i++) {
+            ptr = ptr.next;
+        }
+        ptr.next.next.previous = ptr;
+        ptr.next = ptr.next.next;
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");
