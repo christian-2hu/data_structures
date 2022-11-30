@@ -13,6 +13,18 @@ public class DoublyLinkedList<T> {
     public boolean empty() {
         return this.size == 0 ? true : false;
     }
+    public T get(int index) {
+        if(index < 0 | index >= this.size)
+            throw new IndexOutOfBoundsException(String.format("Size: %s, Index: %s", this.size, index));
+        Node<T> ptr = this.head;
+        for(int i = 0; i <= index; i++) {
+            if(i == index) {
+                return ptr.data;
+            }
+            ptr = ptr.next;
+        }
+        return null;
+    }
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
         if(this.head == null) {

@@ -7,7 +7,7 @@ Implement:
 
 - [x] size() - returns number of data elements in list
 - [x] empty() - bool returns true if empty
-- [ ] get(index) - returns the value of the nth item (starting at 0 for first)
+- [x] get(index) - returns the value of the nth item (starting at 0 for first)
 - [ ] pushFront(value) - adds an item to the front of the list
 - [ ] popFront() - remove front item and return its value
 - [x] add(value) - adds an item at the end
