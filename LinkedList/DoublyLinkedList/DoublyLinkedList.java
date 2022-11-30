@@ -23,6 +23,7 @@ public class DoublyLinkedList<T> {
             newNode.previous = this.tail;
             this.tail = newNode;
         }
+        this.size++;
     }
     public T getFront() {
         return this.size != 0 ? this.head.data : null;
