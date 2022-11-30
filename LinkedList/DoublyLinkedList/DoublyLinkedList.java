@@ -63,6 +63,15 @@ public class DoublyLinkedList<T> {
         }
         System.out.println(String.format("%s]", ptr.data));
     }
+    public void reversePrint() {
+        System.out.print("[");
+        Node<T> ptr = this.tail;
+        while(ptr.previous != null) {
+            System.out.print(String.format("%s, ", ptr.data));
+            ptr = ptr.previous;
+        }
+        System.out.println(String.format("%s]", ptr.data));
+    }
 }
 
 class Node<T> {
