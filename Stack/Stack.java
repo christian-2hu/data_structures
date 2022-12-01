@@ -2,10 +2,15 @@ package Stack;
 
 public class Stack<T> {
     private int size = 0;
+    private Node<T> head;
+
     Stack(){}
 
-    public void push(T value) {
-
+    public void push(T data) {
+        Node<T> newNode = new Node<>(data);
+        newNode.next = this.head;
+        this.head = newNode;
+        this.size++;
     }
     public T pop() {
 

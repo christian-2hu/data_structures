@@ -1,6 +1,6 @@
  Implement using linked-list:
 
-- [ ] push(value) - adds value at position at tail
+- [x] push(value) - adds value at position at tail
 - [ ] pop() - returns value and removes least recently added element (front)
 - [ ] isEmpty()
 - [ ] isFull() - only if using arrays 
