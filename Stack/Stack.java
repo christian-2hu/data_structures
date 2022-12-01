@@ -19,7 +19,7 @@ public class Stack<T> {
         return removedItem;
     }
     public boolean isEmpty() {
-
+        return this.size == 0 ? true : false;
     }
     public T peek() {
 
