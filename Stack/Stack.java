@@ -13,7 +13,10 @@ public class Stack<T> {
         this.size++;
     }
     public T pop() {
-
+        T removedItem = this.head.data;
+        this.head = this.head.next;
+        this.size--;
+        return removedItem;
     }
     public boolean isEmpty() {
 
