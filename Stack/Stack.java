@@ -13,6 +13,8 @@ public class Stack<T> {
         this.size++;
     }
     public T pop() {
+        if(this.size == 0)
+            throw new NullPointerException("The stack is empty!");
         T removedItem = this.head.data;
         this.head = this.head.next;
         this.size--;
@@ -22,10 +24,12 @@ public class Stack<T> {
         return this.size == 0 ? true : false;
     }
     public T peek() {
-
+        if(this.size == 0)
+            throw new NullPointerException("The stack is empty!");
+        return this.head.data;
     }
     public int size() {
-
+        return this.size;
     }
 }
 
