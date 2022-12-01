@@ -122,6 +122,24 @@ public class DoublyLinkedList<T> {
         }
         return null;
     }
+    public void remove(T data) {
+        Node<T> ptr = this.head;
+        Node<T> nextPtr = ptr.next;
+        // The while loop won't work for the first node so we'll check it first
+        if(this.get(0).equals(data)) {
+            this.popFront();
+            return;
+        }
+        while(ptr.next != null) {
+            if(nextPtr.data.equals(data)) {
+                ptr.next = nextPtr.next;
+                this.size--;
+                break;
+            }
+            ptr = ptr.next;
+            nextPtr = ptr.next;
+        }
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");

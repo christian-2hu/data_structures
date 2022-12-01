@@ -33,5 +33,11 @@ public class Main {
         list.print();
         list.reversePrint();
         System.out.println(list.getNFromEnd(list.size()));
+        list.add(14);
+        list.pushFront(14);
+        list.pushFront(13);
+        list.print();
+        list.remove(14);
+        list.print();
     }
 }

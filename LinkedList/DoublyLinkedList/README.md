@@ -18,4 +18,4 @@ Implement:
 - [x] erase(index) - removes node at given index
 - [x] getNFromEnd(n) - returns the value of the node at nth position from the end of the list
 - [ ] reverse() - reverses the list
-- [ ] remove(value) - removes the first item in the list with this value
+- [x] remove(value) - removes the first item in the list with this value
