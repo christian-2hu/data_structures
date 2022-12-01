@@ -109,6 +109,19 @@ public class DoublyLinkedList<T> {
         ptr.next = ptr.next.next;
         this.size--;
     }
+    public T getNFromEnd(int n) {
+        //System.out.println(this.tail.previous.previous.previous.previous);
+        int position = 1;
+        Node<T> ptr = this.tail;
+        while(ptr != null) {
+            if(position == n) {
+                return ptr.data;
+            }
+            ptr = ptr.previous;
+            position++;
+        }
+        return null;
+    }
     // A simple(ugly) print method just to check if things are alright
     public void print() {
         System.out.print("[");

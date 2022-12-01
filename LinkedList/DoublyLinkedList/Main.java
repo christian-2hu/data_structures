@@ -32,5 +32,6 @@ public class Main {
         list.erase(0);
         list.print();
         list.reversePrint();
+        System.out.println(list.getNFromEnd(list.size()));
     }
 }
