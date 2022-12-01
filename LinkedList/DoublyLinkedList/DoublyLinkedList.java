@@ -34,6 +34,7 @@ public class DoublyLinkedList<T> {
         this.head.previous = newNode;
         newNode.next = this.head;
         this.head= newNode;
+        this.size++;
     }
     public T popFront() {
         if(this.head == null)
@@ -87,6 +88,7 @@ public class DoublyLinkedList<T> {
         newNode.next = ptr.next;
         newNode.previous = ptr;
         ptr.next = newNode;
+        this.size++;
     }
     public void erase(int index) {
         if(index < 0 | index >= this.size)
