@@ -22,4 +22,30 @@ public class HashTable<K, V> {
         this.key = new Object[this.capacity];
         this.value = new Object[this.capacity];
     }
+    public void add(K key, V value) {
+        int hash = this.hash(key);
+        int temp = hash;
+        do {
+            if(this.key[temp] == null) {
+                this.key[temp] = key;
+                this.value[temp] = value;
+                this.size++;
+                return;
+            }
+            if(this.key[temp].equals(key)) {
+                this.value[temp] = value;
+                return;
+            }
+            temp = (temp + 1) % this.capacity;
+        } while(temp != hash);
+    }
+    private int hash(K key) {
+        return Math.abs(key.hashCode() % this.capacity);
+    }
+    // Just to check things inside
+    public void print() {
+        for(int i = 0; i < this.capacity; i++) {
+            System.out.println(String.format("[%s] %s -> %s", i, this.key[i], this.value[i]));
+        }
+    }
 }
