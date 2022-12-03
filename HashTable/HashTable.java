@@ -51,11 +51,13 @@ public class HashTable<K, V> {
     @SuppressWarnings("unchecked")
     public V get(K key) {
         int hash = this.hash(key);
-        while(this.key[hash] != null) {
-            if(this.key[hash].equals(key)) {
+        int count = this.capacity;
+        while(count != 0) {
+            if(this.key[hash] != null && this.key[hash].equals(key)) {
                 return (V) this.value[hash];
             }
             hash = (hash + 1) % this.capacity;
+            count--;
         }
         return null;
     }
