@@ -25,6 +25,9 @@ public class HashTable<K, V> {
     public void add(K key, V value) {
         int hash = this.hash(key);
         int temp = hash;
+        // let's resize when it gets to 70% of the capacity
+        if(this.size == Math.round(this.capacity * 0.70))
+            this.resize(this.capacity * 2);
         do {
             if(this.key[temp] == null) {
                 this.key[temp] = key;
@@ -41,6 +44,19 @@ public class HashTable<K, V> {
     }
     private int hash(K key) {
         return Math.abs(key.hashCode() % this.capacity);
+    }
+    @SuppressWarnings("unchecked")
+    private void resize(int newCapacity) {
+        Object[] tempKey = this.key;
+        Object[] tempValue = this.value;
+        this.key = new Object[newCapacity];
+        this.value = new Object[newCapacity];
+        this.capacity = newCapacity;
+        this.size = 0;
+        for(int i = 0; i < tempKey.length; i++) {
+            if(tempKey[i] != null)
+                this.add((K)tempKey[i], (V)tempValue[i]);
+        }
     }
     // Just to check things inside
     public void print() {
