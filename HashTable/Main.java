@@ -13,5 +13,7 @@ public class Main {
         hTable.add(45, "Nana");
         hTable.print(); 
         System.out.println(hTable.get(45));
+        System.out.println(hTable.exists(45));
+        System.out.println(hTable.exists(50));
     }
 }

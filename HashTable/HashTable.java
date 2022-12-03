@@ -77,4 +77,7 @@ public class HashTable<K, V> {
         }
         return null;
     }
+    public boolean exists(K key) {
+        return this.get(key) != null;
+    }
 }
