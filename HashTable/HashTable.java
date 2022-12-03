@@ -48,4 +48,15 @@ public class HashTable<K, V> {
             System.out.println(String.format("[%s] %s -> %s", i, this.key[i], this.value[i]));
         }
     }
+    @SuppressWarnings("unchecked")
+    public V get(K key) {
+        int hash = this.hash(key);
+        while(this.key[hash] != null) {
+            if(this.key[hash].equals(key)) {
+                return (V) this.value[hash];
+            }
+            hash = (hash + 1) % this.capacity;
+        }
+        return null;
+    }
 }

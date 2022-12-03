@@ -12,5 +12,6 @@ public class Main {
         hTable.add(40, "Chris");
         hTable.add(45, "Nana");
         hTable.print(); 
+        System.out.println(hTable.get(45));
     }
 }
