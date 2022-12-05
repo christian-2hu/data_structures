@@ -15,5 +15,7 @@ public class Main {
         System.out.println(hTable.get(45));
         System.out.println(hTable.exists(45));
         System.out.println(hTable.exists(50));
+        hTable.remove(35);
+        hTable.print();
     }
 }

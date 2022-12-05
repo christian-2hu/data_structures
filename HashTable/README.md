@@ -6,4 +6,4 @@
 - [x] add(key, value) - if key already exists, update value
 - [x] exists(key)
 - [x] get(key)
-- [ ] remove(key)
+- [x] remove(key)

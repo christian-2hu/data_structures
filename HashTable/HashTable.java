@@ -80,4 +80,20 @@ public class HashTable<K, V> {
     public boolean exists(K key) {
         return this.get(key) != null;
     }
+    public void remove(K key) {
+        int hash = this.hash(key);
+        int count = this.capacity;
+        while(count != 0) {
+            if(this.key[hash] != null && this.key[hash].equals(key)) {
+                this.key[hash] = null;
+                this.value[hash] = null;
+                this.size--;                
+            }
+            hash = (hash + 1) % this.capacity;
+            count--;
+        }
+        // when removing an item, if size is less or equals to 1/4 of capacity, resize to half 
+        if(this.size <= (this.capacity/4))
+            this.resize(this.capacity/2);
+    }
 }
