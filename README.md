@@ -7,6 +7,6 @@ To be implemented:
 - [x] Linked Lists
 - [x] Stack
 - [x] Queue
-- [ ] Hash Table
+- [x] Hash Table
 - [ ] Trees
 - [ ] Graphs
