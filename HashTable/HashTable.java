@@ -87,7 +87,8 @@ public class HashTable<K, V> {
             if(this.key[hash] != null && this.key[hash].equals(key)) {
                 this.key[hash] = null;
                 this.value[hash] = null;
-                this.size--;                
+                this.size--;
+                break;
             }
             hash = (hash + 1) % this.capacity;
             count--;
